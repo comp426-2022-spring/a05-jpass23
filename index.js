@@ -82,12 +82,12 @@ server.js [options]
 --help	Return this message and exit.
 `)
 // If --help or -h, echo help text to STDOUT and exit
+/*
 if (args.help || args.h) {
     console.log(help)
     process.exit(0)
 }
 
-/*
 var HTTP_PORT = args['port'] ||process.env.PORT || 5555
 var DEBUG = args['debug'] || false
 var LOG = args['log']
