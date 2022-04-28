@@ -59,6 +59,10 @@ const fs = require('fs')
 const db = require('./src/services/database.js');
 const { getSystemErrorMap } = require('util');
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('./public'));
+
 const help = (`
 server.js [options]
 
