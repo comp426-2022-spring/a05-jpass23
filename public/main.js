@@ -11,14 +11,14 @@ const coin = document.getElementById("coin")
 // Add event listener for coin button
 			coin.addEventListener("click", flipCoin)
 			function flipCoin() {
-                fetch('http://localhost:5000/app/flip/', {mode: 'cors'})
+                fetch('http://localhost:5555/app/flip/', {mode: 'cors'})
   				.then(function(response) {
     			  return response.json();
   				})
 				.then(function(result) {
 					console.log(result);
 					document.getElementById("result").innerHTML = result.flip;
-					document.getElementById("quarter").setAttribute("src", result.flip+".jpg");
+					document.getElementById("quarter").setAttribute("src", "assets/img/" + result.flip+".png");
 					coin.disabled = true
 				})
 //				let flip = "FLIPPED"
