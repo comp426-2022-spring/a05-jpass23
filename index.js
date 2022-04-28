@@ -204,4 +204,3 @@ app.post('/app/flip/coins/', (req, res, next) => {
     const count = countFlips(flips)
     res.status(200).json({"raw":flips,"summary":count})
 })
-
