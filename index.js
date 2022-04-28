@@ -56,7 +56,7 @@ const morgan = require('morgan')
 //require fs:
 const fs = require('fs')
 
-const db = require('./database.js');
+const db = require('./src/services/database.js');
 const { getSystemErrorMap } = require('util');
 
 const help = (`
