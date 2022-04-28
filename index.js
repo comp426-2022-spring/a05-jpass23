@@ -159,8 +159,8 @@ app.post('/app/flip/coins/', (req,res) => {
     res.status(200).json({"raw": flips, "summary":count})
 })
 
-app.get('/app/flip/call:guess(heads|tails)', (req,res) => {
-    const flipy = flipACoin(req.params.guess)
+app.post('/app/flip/call/', (req,res) => {
+    const flipy = flipACoin(req.body.guess)
     res.status(200).json(flipy)
 })
 // Default response for any other request
