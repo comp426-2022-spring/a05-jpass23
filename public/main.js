@@ -73,3 +73,17 @@ async function sendFlips({ url, formData }) {
     const response = await fetch(url, options);
     return response.json()
 }
+
+function guessFunc(guess){
+    fetch('http://localhost:5555/app/flip/call')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(result) {
+        console.log(result);
+
+        document.getElementById("guessImg").setAttribute("src", "./assets/img/"+result.call+".png"); // change image
+        document.getElementById("actualImg").setAttribute("src", "./assets/img/"+result.flip+".png");
+        document.getElementById("guessRes").innerHTML = result.result; // change result text
+    })
+}
