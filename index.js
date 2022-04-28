@@ -88,10 +88,6 @@ if(args['log'] == null){
     LOG = true
 }
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static('./public'));
-
 // Start server
 const server = app.listen(HTTP_PORT, () => {
     console.log("Server running on port %PORT%".replace("%PORT%",HTTP_PORT))
