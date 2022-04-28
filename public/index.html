@@ -27,11 +27,10 @@
   </head>
   <body>
     <nav>
-      <button id="homenav">Home</button>
-      <!-- <form action="/app/flip/" method="post"><button id="singlenav">Flip one coin</button></form> -->
-	  <button id="singlenav">Flip one coin</button>
-      <button id="multinav">Flip multiple coins</button>
-      <button id="guessnav">Guess the result</button>
+      <button id="homenav" onclick="btnSelect('home')">Home</button>
+	  <button id="singlenav" onclick="btnSelect('singleFlip')">Flip one coin</button>
+      <button id="multinav" onclick="btnSelect('mutliFlip')">Flip multiple coins</button>
+      <button id="guessnav" onclick="btnSelect('guess')">Guess the result</button>
     </nav>
     <div id="home">
       
