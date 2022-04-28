@@ -28,18 +28,24 @@
   <body>
     <nav>
       <button id="homenav" onclick="btnSelect('home')">Home</button>
-	  <button id="singlenav" onclick="btnSelect('singleFlip')">Flip one coin</button>
-      <button id="multinav" onclick="btnSelect('mutliFlip')">Flip multiple coins</button>
+	  <button id="singlenav" onclick="btnSelect('single')">Flip one coin</button>
+      <button id="multinav" onclick="btnSelect('mutli')">Flip multiple coins</button>
       <button id="guessnav" onclick="btnSelect('guess')">Guess the result</button>
     </nav>
     <div id="home">
       <h1>Play Coin Flips!</h1>
 	  <h3>Click each of buttons to choose the game mode:</h3>
-	  <p>"Flip coin" flips a coin and displays the result. "Flip multiple coins" flips any number of coins that you choose. "Guess flip" allows you to guess the flip and see if you're right. "Home" brings you back to this screen.</p>
-    </div>    
-    <div id="single" class="hidden">
-      
+	  <p>"Flip one coin" flips a coin and displays the result. "Flip multiple coins" flips any number of coins that you choose. "Guess the result" allows you to guess the flip and see if you're right. "Home" brings you back to this screen.</p>
     </div>
+
+    <div id="single" class="hidden">
+	  <h1>Flip one coin</h1>
+	  <button id="coin"></button>
+	  <p id="active"></p>
+	  <p>Result: <span id="result"></span></p>
+	  <img src="./assets/img/coin.jpg" id="quarter">
+    </div>
+	
     <div id="multi" class="hidden">
       <h1>Flip many coins</h1>
 			<form id="coins">
