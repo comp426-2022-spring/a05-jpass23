@@ -55,10 +55,13 @@ const morgan = require('morgan')
 
 //require fs:
 const fs = require('fs')
+const cors = require('cors')
+// Set up cors middleware on all endpoints
 
 const db = require('./src/services/database.js');
 const { getSystemErrorMap } = require('util');
 
+app.use(cors())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('./public'));
