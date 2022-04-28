@@ -90,6 +90,7 @@ if(args['log'] == null){
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static('./public'));
 
 // Start server
 const server = app.listen(HTTP_PORT, () => {
